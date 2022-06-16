@@ -1,13 +1,20 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import MoodPicker from '../components/MoodPicker'
+import MoodPicker from '../components/MoodPicker';
 
 const Home: React.FC = () => {
   return (
-    <View>
-      <Text style={{ color: 'red' }}>Home</Text>
+    <View style={styles.container}>
+      <MoodPicker />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+});
 
 export default Home;
