@@ -7,9 +7,12 @@ const Home: React.FC = () => {
   const appContext = useAppContext();
   return (
     <View>
-      {appContext.moodList.map(item => (
-        <MoodItemRow item={item} key={item.timestamp} />
-      ))}
+      {appContext.moodList
+        .slice()
+        .reverse()
+        .map(item => (
+          <MoodItemRow item={item} key={item.timestamp} />
+        ))}
     </View>
   );
 };
